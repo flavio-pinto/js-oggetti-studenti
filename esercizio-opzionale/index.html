@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Chat</title>
+</head>
+<body>
+    <div id="chat-app">
+        <header>
+            <h1>Chat Handlebars</h1>
+        </header>
+
+        <main id="chat">
+            <div class="input-area">
+                <input type="text" class="input-message">
+                <button class="input-button">Send</button>
+            </div>
+            
+            <div class="chatbox">
+                <h3>Chatbox:</h3>
+            </div>
+        </main>
+    </div>
+    <!-- HANDLEBARS TEMPLATES-->
+    <script id="message-template" type="text/x-handlebars-template">
+        <div class="message {{activeClass}}">
+            <div class="message-text">{{text}}</div>
+            <div class="message-time">{{time}}</div>
+        </div>
+    </script>
+
+    <!-- JAVASCRIPT -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js'></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
